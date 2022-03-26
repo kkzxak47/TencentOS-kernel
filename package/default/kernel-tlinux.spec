@@ -47,7 +47,7 @@ URL: http://www.tencent.com
 ExclusiveArch:  x86_64
 Distribution: Tencent Linux
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-build
-BuildRequires: wget bc module-init-tools curl
+BuildRequires: wget bc module-init-tools curl dwarves lz4
 %if %{with_perf}
 BuildRequires: elfutils-devel zlib-devel binutils-devel newt-devel perl(ExtUtils::Embed) bison flex openssl-devel
 BuildRequires: xmlto asciidoc
@@ -160,7 +160,7 @@ to manipulate perf events.
 %package -n python-perf-debuginfo
 Summary: Debug information for package perf python bindings
 Group: Development/Debug
-#Requires: %%{name}-debuginfo-common-%%{_target_cpu} = %%{version}-%%{release}
+#: %%{name}-debuginfo-common-%%{_target_cpu} = %%{version}-%%{release}
 AutoReqProv: no
 %description -n python-perf-debuginfo
 This package provides debug information for the perf python bindings.
