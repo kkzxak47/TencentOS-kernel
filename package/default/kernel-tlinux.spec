@@ -160,7 +160,7 @@ to manipulate perf events.
 %package -n python-perf-debuginfo
 Summary: Debug information for package perf python bindings
 Group: Development/Debug
-#: %%{name}-debuginfo-common-%%{_target_cpu} = %%{version}-%%{release}
+#Requires: %%{name}-debuginfo-common-%%{_target_cpu} = %%{version}-%%{release}
 AutoReqProv: no
 %description -n python-perf-debuginfo
 This package provides debug information for the perf python bindings.
